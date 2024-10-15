@@ -1,5 +1,7 @@
 ml_training_course/
-data/  
+data/
+main.ipynb
+test.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
