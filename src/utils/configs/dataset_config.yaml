@@ -1,0 +1,132 @@
+data:
+  car_data:
+    car_data_path: data/data.csv
+    delimiter: ','
+    target_validation:
+      type: regression
+      n_classes: null
+      value_range: null
+    split_config:
+      target_column: msrp
+      stratify:
+        stratify_column: model
+        stratify_threshold: 0.05
+      test_size: 0.2
+      val_size: 0.2
+      shuffle: true
+      random_state: 42
+      log_transform: true
+    categorical_features:
+    - make
+    - model
+    - year
+    - engine_fuel_type
+    - engine_cylinders
+    - transmission_type
+    - driven_wheels
+    - number_of_doors
+    - market_category
+    - vehicle_size
+    - vehicle_style
+    numerical_features:
+    - engine_hp
+    - highway_mpg
+    - city_mpg
+    - popularity
+    target_column: msrp
+  bank_data:
+    bank_data_path: data/bank-full.csv
+    delimiter: ;
+    target_validation:
+      type: binary
+      n_classes: 2
+      value_range: null
+    split_config:
+      target_column: y
+      test_size: 0.2
+      val_size: 0.2
+      random_state: 42
+    categorical_features:
+    - job
+    - marital
+    - education
+    - default
+    - housing
+    - loan
+    - contact
+    - month
+    - poutcome
+    numerical_features:
+    - age
+    - balance
+    - day
+    - duration
+    - campaign
+    - pdays
+    - previous
+    target_column: y
+  telco_data:
+    telco_data_path: data/telco_data.csv
+    delimiter: ','
+    target_validation:
+      type: binary
+      n_classes: 2
+      value_range: null
+    split_config:
+      target_column: churn
+      test_size: 0.2
+      val_size: 0.2
+      random_state: 42
+    categorical_features:
+    - customerid
+    - gender
+    - seniorcitizen
+    - partner
+    - dependents
+    - tenure
+    - phoneservice
+    - multiplelines
+    - internetservice
+    - onlinesecurity
+    - onlinebackup
+    - deviceprotection
+    - techsupport
+    - streamingtv
+    - streamingmovies
+    - contract
+    - paperlessbilling
+    - paymentmethod
+    - totalcharges
+    - churn
+    numerical_features:
+    - monthlycharges
+    target_column: churn
+  laptops:
+    laptops_path: data/laptops.csv
+    delimiter: ','
+    target_validation:
+      type: regression
+      n_classes: null
+      value_range:
+      - 201.05
+      - 7150.47
+    split_config:
+      target_column: final_price
+      test_size: 0.2
+      val_size: 0.2
+      random_state: 42
+    categorical_features:
+    - laptop
+    - status
+    - brand
+    - model
+    - cpu
+    - ram
+    - storage
+    - storage_type
+    - gpu
+    - screen
+    - touch
+    numerical_features:
+    - final_price
+    target_column: final_price

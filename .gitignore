@@ -2,6 +2,7 @@ ml_training_course/
 data/
 main.ipynb
 test.py
+visualization/
 
 
 # Byte-compiled / optimized / DLL files

@@ -1,0 +1,9 @@
+models:
+  classification_models:
+    logistic: true
+  
+  regression_models:
+    linear: true
+    lasso: true
+    ridge: true
+    elastic_net: true
